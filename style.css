@@ -1,0 +1,16 @@
+body {
+  background: #111;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  margin-top: 100px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.photo {
+  width: 300px;
+  border-radius: 20px;
+}
