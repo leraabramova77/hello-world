@@ -15,12 +15,18 @@ p {
 }
 
 img {
-  max-height: 400px;
+  
 }
-
 .photo {
-  width: 300px;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 20px;
+}
+.gallery {
+  display: flex;
+  gap: 15px;
+}
 }
 .active {
   color: rgb(255, 0, 174);
