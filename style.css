@@ -15,9 +15,6 @@ p {
 }
 
 img {
-  
-}
-.photo {
   width: 250px;
   height: 300px;
   object-fit: cover;
@@ -27,15 +24,46 @@ img {
   display: flex;
   gap: 15px;
 }
-}
+
 .active {
   color: rgb(255, 0, 174);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+my-nav {
   margin-top: auto;
   margin-bottom: 20px;
+  padding: 20px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.photo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.photo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 0, 150, 0.6);
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.active {
+  color: rgb(255, 0, 200);
+  font-weight: bold;
 }

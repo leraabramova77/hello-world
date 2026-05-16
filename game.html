@@ -4,6 +4,7 @@
     <title>My website</title>
 
     <link rel="stylesheet" href="style.css" />
+    <script src="components/nav.js" defer></script>
   </head>
 
   <body>
@@ -24,13 +25,40 @@
       проходит мимо в целом, Brawl Stars для меня — это игра про динамику,
       реакцию и постоянное желание сыграть ещё
     </p>
+    <h1>Мой любимый персонаж — Лола</h1>
+    <div class="gallery">
+      <img src="assets/lola.jpg" class="photo" />
+      <img src="assets/2lola.jpg" class="photo" />
+      <img src="assets/3lola.jpg" class="photo" />
+      <img src="assets/4lola.jpg" class="photo" />
+    </div>
 
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="about.html">Обо мне</a>
-      <a href="gallery.html">Галерея</a>
-      <a href="game.html" class="active">Игра</a>
-      <a href="outfit.html">Аутфиты</a>
-    </nav>
+    <button onclick="alert('Фото Лолы!')">Что это?</button>
+    <button onclick="toggleImage()">Показать фото пинлолы</button>
+
+    <br /><br />
+
+    <img
+      id="myImage"
+      src="assets/2pinlola.jpg"
+      style="display: none"
+      width="300"
+    />
+
+    <script>
+      function toggleImage() {
+        const img = document.getElementById('myImage');
+
+        // console.log('img', img);
+
+        if (img.style.display === 'none') {
+          img.style.display = 'block';
+        } else {
+          img.style.display = 'none';
+        }
+      }
+    </script>
+
+    <my-nav />
   </body>
 </html>
