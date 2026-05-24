@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,10 +24,10 @@ img {
   object-fit: cover;
   border-radius: 20px;
 }
-.gallery {
-  display: flex;
+/* .gallery { */
+/* display: flex;
   gap: 15px;
-}
+} */
 
 .active {
   color: rgb(255, 0, 174);
@@ -47,17 +51,17 @@ my-nav {
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
-
+/* 
 .gallery {
   display: flex;
   justify-content: center;
   gap: 15px;
-}
+} */
 .photo:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(255, 0, 150, 0.6);
 }
-.gallery {
+.gal-tflexlery {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -66,4 +70,8 @@ my-nav {
 .active {
   color: rgb(255, 0, 200);
   font-weight: bold;
+}
+
+.s67 {
+  align-self: center;
 }

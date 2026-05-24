@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My website</title>
+    <script src="components/nav.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Привет ✨</h1>
+
+    <textarea id="input" placeholder="Напиши что-нибудь..."></textarea>
+
+    <br />
+
+    <button onclick="send()">Отправить</button>
+
+    <p><b>Ответ:</b></p>
+
+    <div id="output"></div>
+
+    <script>
+      async function send() {
+        const text = document.getElementById('input').value;
+
+        const res = await fetch(
+          'https://openrouter.ai/api/v1/chat/completions',
+          {
+            method: 'POST',
+
+            headers: {
+              'Content-Type': 'application/json',
+
+              Authorization:
+                'Bearer YOUR_API_KEY',
+            },
+
+            body: JSON.stringify({
+              model: 'baidu/cobuddy:free',
+
+              messages: [{ role: 'user', content: text }],
+            }),
+          }
+        );
+
+        const data = await res.json();
+
+        document.getElementById('output').innerText =
+          data.choices[0].message.content;
+      }
+    </script>
+
+    <my-nav />
+  </body>
+</html>

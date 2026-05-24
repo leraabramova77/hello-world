@@ -9,6 +9,8 @@ class MyNav extends HTMLElement {
         <a href="gallery.html" class="${page === 'gallery.html' ? 'active' : ''}">Галерея</a>
         <a href="game.html" class="${page === 'game.html' ? 'active' : ''}">Игра</a>
         <a href="outfit.html" class="${page === 'outfit.html' ? 'active' : ''}">Аутфиты</a>
+        <a href="mem.html" class="${page === 'mem.html' ? 'active' : ''}">Мемы</a>
+        <a href="ai.html" class="${page === 'ai.html' ? 'active' : ''}">ИИ</a>
       </nav>
 
       <style>

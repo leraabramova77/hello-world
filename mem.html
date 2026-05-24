@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My website</title>
+    <script src="components/nav.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Привет ✨</h1>
+    <button onclick="getRandomMeme()">Новый мем 😂</button>
+
+    <br />
+
+    <img id="memeImage" width="400" class="s67 photo" />
+
+    <!-- <img id="memeImage" width="400" class="photo" />
+
+    <img id="memeImage" width="400" class="photo" /> -->
+
+    <my-nav />
+
+    <script>
+      const memes = [
+        'buzz/mocking',
+        'doge',
+        'drake',
+        'success',
+        'philosoraptor',
+        'one_does_not_simply',
+        'gru',
+      ];
+
+      function getRandomMeme() {
+        const random = memes[Math.floor(Math.random() * memes.length)];
+
+        const url = `https://api.memegen.link/images/${random}/hello/there.png`;
+
+        document.getElementById('memeImage').src = url;
+      }
+
+      // загрузить первый мем сразу
+      getRandomMeme();
+    </script>
+  </body>
+</html>
